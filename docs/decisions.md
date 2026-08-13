@@ -11,7 +11,7 @@ Accepted
 
 ### Decision
 
-Expand the project from a traditional backup and recovery initiative into a Hybrid Data Resilience & Recovery Platform.
+Expand the project from a traditional backup and recovery initiative into a Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform.
 
 ### Rationale
 
@@ -165,7 +165,7 @@ Accepted
 
 ### Decision
 
-Validate backup workflows across multiple platforms before production adoption.
+Validate backup and recovery workflows across multiple platforms before production adoption.
 
 ### Rationale
 
@@ -278,4 +278,4 @@ The following decisions define the final architecture:
 - Validation-driven engineering
 - Root cause analysis methodology
 
-Together, these decisions transformed the project from a backup solution into a comprehensive Hybrid Data Resilience & Recovery Platform.
+Together, these decisions transformed the project from a backup solution into a comprehensive Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform.

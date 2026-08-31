@@ -1,0 +1,36 @@
+---
+# keep-drives-active.yml
+# Sanitized portfolio example
+# Based on production remediation developed after a RAID1 storage incident.
+
+- name: Deploy USB drive keepalive
+  hosts: storage_hosts
+  become: true
+
+  vars:
+    keepalive_script_path: /usr/local/bin/drive-keepalive.sh
+    keepalive_log_path: /var/log/drive-keepalive.log
+
+    drives_to_ping:
+      - /dev/disk/by-id/storage-device-01
+      - /dev/disk/by-id/storage-device-02
+
+  tasks:
+
+    - name: Deploy keepalive script
+      ansible.builtin.copy:
+        dest: "{{ keepalive_script_path }}"
+        mode: "0755"
+
+    - name: Ensure log file exists
+      ansible.builtin.file:
+        path: "{{ keepalive_log_path }}"
+        state: touch
+        mode: "0644"
+
+    - name: Schedule keepalive every 2 hours
+      ansible.builtin.cron:
+        name: "Storage keepalive"
+        minute: "0"
+        hour: "*/2"
+        user: root

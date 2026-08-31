@@ -1,5 +1,16 @@
 # Dev-Ops-08 Multi-OS Hybrid Data Resilience & Preventive Disaster Recovery Platform
+
 ## Build Log
+
+---
+
+## 2026-08-31 - RCA-003 Created
+
+Created RCA-003 documenting the md0 RAID outage, USB storage instability, replication failures, filesystem recovery, repository recovery, and remediation actions.
+
+See:
+
+docs/rca/RCA-003-md0-RAID-Outage-USB-Storage-Failure.md
 
 ---
 

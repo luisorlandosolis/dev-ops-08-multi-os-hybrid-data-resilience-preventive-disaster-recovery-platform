@@ -1325,6 +1325,46 @@ The revised schedule provided additional execution time and operational buffer b
 
 ✅ Reliability improved
 
+### RCA-003 RAID Degradation and Storage Instability
+
+#### Summary
+
+Investigated recurring RAID degradation events impacting the replication tier of the backup platform.
+
+#### Findings
+
+Validated:
+
+- RAID member failure and degraded array behavior.
+- Storage recovery procedures.
+- Filesystem validation and repair activities.
+- RAID synchronization and recovery operations.
+
+#### Root Cause
+
+The investigation determined that storage instability was most likely associated with USB-attached storage reliability factors rather than filesystem corruption, backup software, Linux RAID functionality, or replication workflows.
+
+Contributing factors included:
+
+- USB connectivity instability
+- Storage enclosure reliability concerns
+- Power-related interruptions
+- Device availability fluctuations
+
+#### Resolution
+
+Completed:
+
+- RAID reassembly
+- Filesystem validation
+- Synchronization recovery
+- Storage migration planning
+- Backup workflow modernization
+
+#### Outcome
+
+The RAID array was successfully restored to a healthy state and backup workflows were migrated toward a dedicated backup orchestration platform.
+
 #### Lesson Learned
 
 Backup failures should be investigated through logs and execution timelines before making infrastructure changes. Apparent storage failures may originate from workflow design, scheduling conflicts, or operational timing issues.
@@ -1489,6 +1529,15 @@ Methodical investigation, log analysis, and validation testing prevented unneces
 
 ## Key Outcomes
 
+- RAID recovery successfully completed.
+- RAID1 resiliency restored and validated.
+- Backup orchestration migrated to a dedicated backup platform.
+- File-sharing services successfully migrated.
+- Kubernetes backup workflows integrated.
+- System-image protection workflows integrated.
+- Backup platform self-protection implemented.
+- Backup automation ownership centralized.
+- Storage recovery RCA completed and documented.
 - Multi-tier resilience architecture implemented.
 - Hybrid protection strategy established.
 - Recovery-focused platform design validated.
@@ -1531,6 +1580,10 @@ Methodical investigation, log analysis, and validation testing prevented unneces
 - Implement backup health monitoring.
 - Create automated failure notifications.
 - Improve operational visibility.
+- Implement RAID degradation alerting.
+- Monitor storage health and synchronization status.
+- Detect replication failures automatically.
+- Alert on missing backup repository mounts.
 
 ### Backup Health Dashboards
 

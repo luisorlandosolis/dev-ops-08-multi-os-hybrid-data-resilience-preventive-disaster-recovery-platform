@@ -63,7 +63,7 @@ ProxmoxConfigBackup
 
 D. Archive Tier
 --------------------------------
-Domain Controller (192.168.1.138)
+   Archive Tier
 
 F:\Archive
 
@@ -108,7 +108,7 @@ Mount Point: /srv/storage
 #### Archive Tier
 
 ```text
-Domain Controller (192.168.1.138)
+Archive Tier
 
 Archive Storage
 F:\Archive
